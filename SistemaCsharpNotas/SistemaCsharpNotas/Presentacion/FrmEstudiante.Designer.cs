@@ -46,7 +46,9 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(831, 492);
             this.Controls.Add(this.DgvEstudiante);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "FrmEstudiante";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
             this.Text = "FrmEstudiante";
             this.Load += new System.EventHandler(this.FrmEstudiante_Load);
             ((System.ComponentModel.ISupportInitialize)(this.DgvEstudiante)).EndInit();
