@@ -15,5 +15,14 @@ namespace SistemaCsharpNotas.Entidad
         public string Sexo;
         public string Correo;
 
+        public ClsEstudiante(string codigo, string dni, string nombres, string apellidos, string sexo, string correo)
+        {
+            Codigo = codigo;
+            Dni = dni;
+            Nombres = nombres;
+            Apellidos = apellidos;
+            Sexo = sexo;
+            Correo = correo;
+        }
     }
 }

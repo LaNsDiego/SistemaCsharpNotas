@@ -33,5 +33,10 @@ namespace SistemaCsharpNotas.Negocio
             //con los parametros correspondientes y devuelve un DataSet
             return DB.EjecutarProcedimiento("spCrearEstudiante", parametros);
         }
+
+        public DataSet Listar()
+        {
+            return DB.EjecutarProcedimiento("spListarEstudiante");
+        }
     }
 }

@@ -1,4 +1,5 @@
 ﻿using SistemaCsharpNotas.Negocio;
+using SistemaCsharpNotas.Presentacion;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -17,6 +18,13 @@ namespace SistemaCsharpNotas
         {
             InitializeComponent();
             
+        }
+
+        private void BtnEstudiante_Click(object sender, EventArgs e)
+        {
+            FrmEstudiante frm = new FrmEstudiante();
+            frm.Show();
+            this.Hide();
         }
     }
 }

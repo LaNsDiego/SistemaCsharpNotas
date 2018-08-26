@@ -29,7 +29,7 @@
         private void InitializeComponent()
         {
             this.BtnNotas = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
+            this.BtnEstudiante = new System.Windows.Forms.Button();
             this.button3 = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
@@ -42,14 +42,15 @@
             this.BtnNotas.Text = "button1";
             this.BtnNotas.UseVisualStyleBackColor = true;
             // 
-            // button2
+            // BtnEstudiante
             // 
-            this.button2.Location = new System.Drawing.Point(191, 23);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(131, 117);
-            this.button2.TabIndex = 1;
-            this.button2.Text = "button2";
-            this.button2.UseVisualStyleBackColor = true;
+            this.BtnEstudiante.Location = new System.Drawing.Point(191, 23);
+            this.BtnEstudiante.Name = "BtnEstudiante";
+            this.BtnEstudiante.Size = new System.Drawing.Size(131, 117);
+            this.BtnEstudiante.TabIndex = 1;
+            this.BtnEstudiante.Text = "button2";
+            this.BtnEstudiante.UseVisualStyleBackColor = true;
+            this.BtnEstudiante.Click += new System.EventHandler(this.BtnEstudiante_Click);
             // 
             // button3
             // 
@@ -66,7 +67,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(693, 450);
             this.Controls.Add(this.button3);
-            this.Controls.Add(this.button2);
+            this.Controls.Add(this.BtnEstudiante);
             this.Controls.Add(this.BtnNotas);
             this.Name = "FrmPrincipal";
             this.Text = "Form1";
@@ -77,7 +78,7 @@
         #endregion
 
         private System.Windows.Forms.Button BtnNotas;
-        private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.Button BtnEstudiante;
         private System.Windows.Forms.Button button3;
     }
 }

@@ -24,7 +24,7 @@ namespace SistemaCsharpNotas.Negocio
             this.conexion.Close();
         }
 
-        public DataSet EjecutarProcedimiento( string procedimiento ,  ClsNSQLParametro[] parametros )
+        public DataSet EjecutarProcedimiento( string procedimiento ,  ClsNSQLParametro[] parametros = null )
         {
  
             DataSet ds = new DataSet();
@@ -32,9 +32,12 @@ namespace SistemaCsharpNotas.Negocio
             SqlCommand cmd = this.conexion.CreateCommand();
             cmd.CommandType = CommandType.StoredProcedure;
             cmd.CommandText = procedimiento;
-            for (int i = 0; i < parametros.Length ; i++)
+            if (parametros != null)
             {
-                cmd.Parameters.Add(parametros[i].Nombre, parametros[i].Tipo).Value = parametros[i].Valor;
+                for (int i = 0; i < parametros.Length; i++)
+                {
+                    cmd.Parameters.Add(parametros[i].Nombre, parametros[i].Tipo).Value = parametros[i].Valor;
+                }
             }
 
             //cmd.ExecuteNonQuery()
@@ -45,5 +48,6 @@ namespace SistemaCsharpNotas.Negocio
             return ds;
 
         }
+
     }
 }
