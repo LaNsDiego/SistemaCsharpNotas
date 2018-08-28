@@ -1,4 +1,5 @@
-﻿using System;
+﻿using SistemaCsharpNotas.Presentacion;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
@@ -16,7 +17,7 @@ namespace SistemaCsharpNotas
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new FrmPrincipal());
+            Application.Run(new FrmLogin());
         }
     }
 }

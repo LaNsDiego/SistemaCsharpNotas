@@ -16,15 +16,29 @@ namespace SistemaCsharpNotas
     {
         public FrmPrincipal()
         {
-            InitializeComponent();
-            
+            InitializeComponent();            
+        }
+
+        private void AbrirFormHijo(object frmHijo)
+        {
+            PnlContenedor.Controls.Clear();
+            Form frm = frmHijo as Form;
+            frm.TopLevel = false;
+            frm.Dock = DockStyle.Fill;
+            PnlContenedor.Controls.Add(frm);
+            frm.Show();
         }
 
         private void BtnEstudiante_Click(object sender, EventArgs e)
         {
             FrmEstudiante frm = new FrmEstudiante();
-            frm.Show();
-            this.Hide();
+            AbrirFormHijo(frm);
+        }
+
+        private void BtnNotas_Click(object sender, EventArgs e)
+        {
+
+            
         }
     }
 }

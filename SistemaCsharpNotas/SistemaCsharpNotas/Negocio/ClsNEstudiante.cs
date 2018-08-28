@@ -10,12 +10,6 @@ namespace SistemaCsharpNotas.Negocio
 {
     class ClsNEstudiante
     {
-        private ClsNConexion DB;
-
-        public ClsNEstudiante()
-        {
-            DB = new ClsNConexion();
-        }
 
         public DataSet Agregar(ClsEstudiante estudiante)
         {
@@ -31,12 +25,12 @@ namespace SistemaCsharpNotas.Negocio
 
             //La funcion EjecutarProcedimiento ejecuta un procedimiento almacenada 
             //con los parametros correspondientes y devuelve un DataSet
-            return DB.EjecutarProcedimiento("spCrearEstudiante", parametros);
+            return ClsNConexion.EjecutarProcedimiento("spCrearEstudiante", parametros);
         }
 
         public DataSet Listar()
         {
-            return DB.EjecutarProcedimiento("spListarEstudiante");
+            return ClsNConexion.EjecutarProcedimiento("spListarEstudiante");
         }
 
         public DataSet Modificar(ClsEstudiante estudiante)
@@ -54,7 +48,7 @@ namespace SistemaCsharpNotas.Negocio
 
             //La funcion EjecutarProcedimiento ejecuta un procedimiento almacenada 
             //con los parametros correspondientes y devuelve un DataSet
-            return DB.EjecutarProcedimiento("spModificarEstudiante", parametros);
+            return ClsNConexion.EjecutarProcedimiento("spModificarEstudiante", parametros);
         }
     }
 }
