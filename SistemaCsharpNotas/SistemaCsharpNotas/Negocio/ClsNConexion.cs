@@ -11,15 +11,24 @@ namespace SistemaCsharpNotas.Negocio
     class ClsNConexion
     {
         static string conex = "Server=Asus-Laptop\\SQLEXPRESS2017;Database=pruebas;UID=sa;Pwd=yatusabespancho";
-        SqlConnection conexion = new SqlConnection(conex);
+        private SqlConnection conexion = new SqlConnection(conex);
+        private static ClsNConexion instancia = new ClsNConexion();
+        public ClsNConexion()
+        {
 
-        public void Abrir()
+        } 
+
+        public static SqlConnection getConexion()
+        {
+            return instancia.conexion;
+        }
+        public void Conectar()
         {
             this.conexion.Open();
         }
 
 
-        public void Cerrar()
+        public void Desconectar()
         {
             this.conexion.Close();
         }
@@ -29,7 +38,7 @@ namespace SistemaCsharpNotas.Negocio
  
             DataSet ds = new DataSet();
             SqlDataAdapter data = new SqlDataAdapter();
-            SqlCommand cmd = this.conexion.CreateCommand();
+            SqlCommand cmd = ClsNConexion.getConexion().CreateCommand();
             cmd.CommandType = CommandType.StoredProcedure;
             cmd.CommandText = procedimiento;
             if (parametros != null)
@@ -40,11 +49,10 @@ namespace SistemaCsharpNotas.Negocio
                 }
             }
 
-            //cmd.ExecuteNonQuery()
             data.SelectCommand = cmd;
-            this.Abrir();
+            this.Conectar();
             data.Fill(ds);
-            this.Cerrar();
+            this.Desconectar();
             return ds;
 
         }
