@@ -1,4 +1,6 @@
-﻿using System;
+﻿using SistemaCsharpNotas.Entidad;
+using SistemaCsharpNotas.Negocio;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -19,6 +21,7 @@ namespace SistemaCsharpNotas.Presentacion
 
         private void button1_Click(object sender, EventArgs e)
         {
+
             FrmPrincipal frm = new FrmPrincipal();
             this.Hide();
             frm.Visible = true;

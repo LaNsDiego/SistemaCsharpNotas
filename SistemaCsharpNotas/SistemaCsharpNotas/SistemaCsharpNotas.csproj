@@ -46,10 +46,18 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Entidad\ClsDocente.cs" />
     <Compile Include="Entidad\ClsEstudiante.cs" />
     <Compile Include="Negocio\ClsNConexion.cs" />
     <Compile Include="Negocio\ClsNEstudiante.cs" />
+    <Compile Include="Negocio\ClsNFichero.cs" />
     <Compile Include="Negocio\ClsNSQLParametro.cs" />
+    <Compile Include="Presentacion\FrmDocente.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Presentacion\FrmDocente.Designer.cs">
+      <DependentUpon>FrmDocente.cs</DependentUpon>
+    </Compile>
     <Compile Include="Presentacion\FrmEstudiante.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -62,6 +70,12 @@
     <Compile Include="Presentacion\FrmLogin.Designer.cs">
       <DependentUpon>FrmLogin.cs</DependentUpon>
     </Compile>
+    <Compile Include="Presentacion\FrmNota.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Presentacion\FrmNota.Designer.cs">
+      <DependentUpon>FrmNota.cs</DependentUpon>
+    </Compile>
     <Compile Include="Presentacion\FrmPrincipal.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -70,11 +84,17 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="Presentacion\FrmDocente.resx">
+      <DependentUpon>FrmDocente.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Presentacion\FrmEstudiante.resx">
       <DependentUpon>FrmEstudiante.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Presentacion\FrmLogin.resx">
       <DependentUpon>FrmLogin.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Presentacion\FrmNota.resx">
+      <DependentUpon>FrmNota.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Presentacion\FrmPrincipal.resx">
       <DependentUpon>FrmPrincipal.cs</DependentUpon>

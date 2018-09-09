@@ -40,5 +40,11 @@ namespace SistemaCsharpNotas
 
             
         }
+
+        private void BtnDocente_Click(object sender, EventArgs e)
+        {
+            FrmDocente frm = new FrmDocente();
+            AbrirFormHijo(frm);
+        }
     }
 }
