@@ -121,8 +121,19 @@
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
+  <ItemGroup />
   <ItemGroup>
-    <Folder Include="BaseDeDatos\" />
+    <Content Include="BaseDeDatos\SQL Capacidad.sql" />
+    <Content Include="BaseDeDatos\SQL Carreras.sql" />
+    <Content Include="BaseDeDatos\SQL Criterio.sql" />
+    <Content Include="BaseDeDatos\SQL Docentes.sql" />
+    <Content Include="BaseDeDatos\SQL Estudiantes.sql" />
+    <Content Include="BaseDeDatos\SQL Modulos.sql" />
+    <Content Include="BaseDeDatos\SQL Notas.sql" />
+    <Content Include="BaseDeDatos\SQL Semestres.sql" />
+    <Content Include="BaseDeDatos\SQL Silabos.sql" />
+    <Content Include="BaseDeDatos\SQL Unidades.sql" />
+    <Content Include="BaseDeDatos\SQL Usuarios.sql" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
