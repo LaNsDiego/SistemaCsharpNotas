@@ -124,10 +124,8 @@
   </ItemGroup>
   <ItemGroup />
   <ItemGroup>
-    <Content Include="BaseDeDatos\SQL Capacidad.sql" />
     <Content Include="BaseDeDatos\SQL Capacidades.sql" />
     <Content Include="BaseDeDatos\SQL Carreras.sql" />
-    <Content Include="BaseDeDatos\SQL Criterio.sql" />
     <Content Include="BaseDeDatos\SQL Criterios.sql" />
     <Content Include="BaseDeDatos\SQL Docentes.sql" />
     <Content Include="BaseDeDatos\SQL Estudiantes.sql" />
