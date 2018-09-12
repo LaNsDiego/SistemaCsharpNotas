@@ -61,5 +61,15 @@ namespace SistemaCsharpNotas.Negocio
             }
             return linea;
         }
+
+        public static string[] Leer(string tabla)
+        {
+            StreamReader lector = ClsNFichero.ObtenerLector(tabla);
+
+            string contenido = lector.ReadToEnd();
+            string[] filas = contenido.Split(new string[] { Environment.NewLine }, StringSplitOptions.RemoveEmptyEntries);
+            lector.Close();
+            return filas;
+        }
     }
 }
