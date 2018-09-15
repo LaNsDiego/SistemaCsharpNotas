@@ -56,9 +56,11 @@ namespace SistemaCsharpNotas.Negocio
             {
                 if (linea.Contains(textoABuscar))
                 {
+                    lector.Close();
                     return linea;
                 }
             }
+            lector.Close();
             return linea;
         }
 
