@@ -25,6 +25,8 @@ namespace SistemaCsharpNotas
             Form frm = frmHijo as Form;
             frm.TopLevel = false;
             frm.Dock = DockStyle.Fill;
+            if (PnlContenedor.Controls.Count > 0) { PnlContenedor.Controls.RemoveAt(0); }
+            
             PnlContenedor.Controls.Add(frm);
             frm.Show();
         }
