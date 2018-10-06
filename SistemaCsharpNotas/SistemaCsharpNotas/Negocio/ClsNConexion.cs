@@ -10,7 +10,7 @@ namespace SistemaCsharpNotas.Negocio
 {
     class ClsNConexion
     {
-        static string conex = "Server=Asus-Laptop\\SQLEXPRESS2017;Database=pruebas;UID=sa;Pwd=yatusabespancho";
+        static string conex = "";
         private static SqlConnection conexion = new SqlConnection(conex);
         private ClsNConexion()
         {
